@@ -5,8 +5,13 @@ const Color kInactiveCardColour = Color(0xFF111328);
 const Color kBottomButtonColour = Color(0xFFEB1555);
 
 const kHeaderTextStyle = TextStyle(
-  fontSize: 25.0,
+  fontSize: 35.0,
   fontWeight: FontWeight.bold,
+);
+
+const kBigAgeAndWeightTextStyle = TextStyle(
+  fontSize: 40.0,
+  fontWeight: FontWeight.w700,
 );
 
 const kResultTextStyle = TextStyle(
@@ -16,7 +21,7 @@ const kResultTextStyle = TextStyle(
 );
 
 const kBMITextStyle = TextStyle(
-  fontSize: 50.0,
+  fontSize: 70.0,
   fontWeight: FontWeight.w900,
 );
 

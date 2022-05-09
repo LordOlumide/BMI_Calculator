@@ -25,7 +25,7 @@ class _InputPageState extends State<InputPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('BMI CALCULATOR'),
+        title: const Text('BMI CALCULATOR'),
         centerTitle: true,
       ),
       body: Column(
@@ -37,9 +37,7 @@ class _InputPageState extends State<InputPage> {
                 child: GestureDetector(
                   onTap: () {
                     setState(() {
-                      print(selectedGender);
                       selectedGender = Gender.male;
-                      print(selectedGender);
                     });
                   },
                   child: CustomCard(
@@ -66,9 +64,7 @@ class _InputPageState extends State<InputPage> {
                 child: GestureDetector(
                   onTap: () {
                     setState(() {
-                      print(selectedGender);
                       selectedGender = Gender.female;
-                      print(selectedGender);
                     });
                   },
                   child: CustomCard(
@@ -170,10 +166,7 @@ class _InputPageState extends State<InputPage> {
                         ),
                         Text(
                           weight.toString(),
-                          style: TextStyle(
-                            fontSize: 40.0,
-                            fontWeight: FontWeight.w700,
-                          ),
+                          style: kBigAgeAndWeightTextStyle,
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
@@ -207,16 +200,13 @@ class _InputPageState extends State<InputPage> {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Text(
+                        const Text(
                           'AGE',
                           style: kInputPageTextStyle,
                         ),
                         Text(
                           age.toString(),
-                          style: TextStyle(
-                            fontSize: 40.0,
-                            fontWeight: FontWeight.w700,
-                          ),
+                          style: kBigAgeAndWeightTextStyle,
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,

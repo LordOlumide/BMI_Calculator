@@ -25,14 +25,21 @@ class ResultPage extends StatelessWidget {
         centerTitle: true,
       ),
       body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
-            child: const Text(
-              'Your Results',
-              style: kHeaderTextStyle,
+            alignment: Alignment.bottomLeft,
+            child: Padding(
+              padding: const EdgeInsets.all(15.0),
+              child: const Text(
+                'Your Results:',
+                style: kHeaderTextStyle,
+                // textAlign: TextAlign.start,
+              ),
             ),
           ),
           Expanded(
+            flex: 5,
             child: CustomCard(
               colour: kActiveCardColour,
               child: Column(
@@ -40,16 +47,17 @@ class ResultPage extends StatelessWidget {
                 // crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Text(
-                    bmi,
+                    resultLabel,
                     style: kResultTextStyle,
                   ),
                   Text(
-                    resultLabel,
+                    bmi,
                     style: kBMITextStyle,
                   ),
                   Text(
                     interpretation,
                     style: kBMIMeaningTextStyle,
+                    textAlign: TextAlign.center,
                   ),
                 ],
               ),
