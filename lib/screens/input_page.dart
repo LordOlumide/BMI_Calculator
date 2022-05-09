@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:bmi_calculator_reboot/constants.dart';
 import 'package:bmi_calculator_reboot/components/custom_card.dart';
+import 'package:bmi_calculator_reboot/components/bottom_button.dart';
+import 'package:bmi_calculator_reboot/screens/results_page.dart';
 
 class InputPage extends StatefulWidget {
   @override
@@ -80,17 +82,15 @@ class _InputPageState extends State<InputPage> {
               ],
             ),
           ),
-          RawMaterialButton(
-            onPressed: null,
-            fillColor: Color(0xFF0D0D3B),
-            constraints: BoxConstraints(
-              minHeight: 50.0,
-              minWidth: double.infinity,
-            ),
-            child: Text(
-              'Calculate',
-            ),
-          )
+          BottomButton(
+            label: 'CALCULATE',
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) {return ResultPage();})
+              );
+            },
+          ),
         ],
       ),
     );

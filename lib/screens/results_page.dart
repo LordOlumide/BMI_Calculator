@@ -1,13 +1,32 @@
+import 'package:bmi_calculator_reboot/components/custom_card.dart';
+import 'package:bmi_calculator_reboot/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:bmi_calculator_reboot/components/bottom_button.dart';
 
-class ResultsPage extends StatefulWidget {
-  @override
-  State<ResultsPage> createState() => _ResultsPageState();
-}
+class ResultPage extends StatelessWidget {
+  const ResultPage({Key? key}) : super(key: key);
 
-class _ResultsPageState extends State<ResultsPage> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          'BMI CALCULATOR',
+        ),
+        centerTitle: true,
+      ),
+      body: Column(
+        children: [
+          Container(child: Text('Your Results')),
+          Expanded(child: CustomCard(colour: kActiveCardColour)),
+          BottomButton(
+            label: 'RE-CALCULATE',
+            onPressed: () {
+              Navigator.pop(context);
+            },
+          )
+        ],
+      ),
+    );
   }
 }
